@@ -1,0 +1,250 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f9;
+  }
+  
+  
+  /* Header Section with GIF Background */
+  .header {
+    background-color: #333; 
+    color: #fff;
+    padding: 40px 100px; 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+  }
+  .header h1 {
+    font-size: 60px; 
+    font-weight: bold;
+    color: #f39c12; 
+    letter-spacing: 2px; 
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); 
+  }
+  
+  
+  /* Adjusting navigation styling */
+  .nav ul {
+    list-style-type: none;
+    display: flex;
+    gap: 30px;
+  }
+  
+  .nav ul li {
+    display: inline;
+  }
+  
+  .nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  .nav ul li a:hover {
+    color: #f39c12;
+  }
+  
+  
+  
+  /* Intro Section - Overlap the Header's GIF */
+  .intro {
+    background-image: url('backgif.gif'); 
+    background-size: cover; 
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #fff;
+    text-align: center;
+    padding: 60px 20px;
+    margin-top: -30px; 
+    margin-bottom: 0;
+    z-index: 2; 
+    position: relative;
+    animation: fadeIn 2s ease-out; 
+  }
+  /* Text Animations for Intro */
+  .intro h2 {
+    font-size: 42px; 
+    margin-bottom: 20px;
+    opacity: 0;
+    animation: slideUp 1.5s forwards 0.5s; 
+  }
+  
+  .intro p {
+    font-size: 20px; 
+    max-width: 800px;
+    margin: 0 auto;
+    opacity: 0;
+    animation: fadeInText 1.5s forwards 1s; 
+  }
+  
+  
+  /* Fade-in effect for Intro */
+  @keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+  }
+  
+  /* Slide-up animation for h2 */
+  @keyframes slideUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+  }
+  
+  /* Fade-in animation for paragraph */
+  @keyframes fadeInText {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+  }
+  
+  /* Courses Section with GIF Background */
+  .courses {
+    background-image: url('backgif.gif'); 
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    color: #fff;
+    padding: 60px 20px;
+    text-align: center;
+  }
+  
+  .courses h2 {
+    font-size: 40px; 
+    margin-bottom: 40px;
+    color: #fff;
+  }
+  
+  /* Course Container */
+  .course {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px; 
+    align-items: flex-start;
+    transition: transform 0.3s ease-in-out;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 20px; 
+    border-radius: 10px;
+  }
+  .course:hover {
+    transform: translateY(-15px); 
+  }
+  
+  /* Course Image Section */
+  .course-image {
+    position: relative;
+    overflow: hidden;
+    width: 350px; 
+    height: 250px; 
+    border-radius: 8px;
+    transition: transform 0.5s ease-in-out, opacity 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .course-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease-in-out, opacity 0.3s ease;
+  }
+  
+  /* Zoom Effect on Hover */
+  .course-image img:hover {
+    transform: scale(1.1); 
+    opacity: 0.9;
+  }
+  
+  /* Animations for Course Descriptions */
+  .course-info {
+    max-width: 500px; 
+    margin-left: 20px; 
+    opacity: 0;
+    transform: translateX(20px);
+    animation: slideIn 0.5s forwards ease-out;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+  }
+  
+  .course-info h3 {
+    font-size: 28px;
+    color: #fff;
+    margin-bottom: 15px;
+  }
+  
+  .course-info p {
+    font-size: 18px;
+    color: #ddd;
+    margin-bottom: 15px; 
+  }
+  
+  .course-info a {
+    color: #f39c12;
+    font-weight: bold;
+    text-decoration: none;
+  }
+  
+  .course-info a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Hover effect for course info */
+  .course:hover .course-info {
+    transform: translateX(0); 
+    opacity: 1; 
+  }
+  
+  /* Footer */
+  .footer {
+    background-color: #333; 
+    color: #fff;
+    text-align: center;
+    padding: 30px 0; 
+  }
+  
+  .footer p {
+    margin-bottom: 10px;
+  }
+  
+  .footer .social-links a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 0 10px;
+  }
+  
+  .footer .social-links a:hover {
+    color: #f39c12;
+  }
+  
+  /* Keyframe for sliding in course description */
+  @keyframes slideIn {
+    0% {
+        opacity: 0;
+        transform: translateX(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+  }
